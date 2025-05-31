@@ -8,4 +8,5 @@ class AppTexts {
   static const String calculate = "CALCULATE";
   static const String yourResult = "Your Result:";
   static const String normal = "NORMAL";
+  static const String cm = " cm";
 }

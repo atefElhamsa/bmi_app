@@ -20,7 +20,7 @@ class _ListViewContainerTypeState extends State<ListViewContainerType> {
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) {
-          return const SizedBox(width: 50);
+          return const SizedBox(width: 70);
         },
         itemBuilder: (context, index) {
           return GestureDetector(
