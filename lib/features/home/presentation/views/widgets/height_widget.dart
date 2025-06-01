@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 import '../../../../../core/shared_widgets/custom_text.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_texts.dart';
+import '../../../data/models/age_and_weight_item_model.dart';
 import '../../../data/models/text_model.dart';
 
 class HeightWidget extends StatefulWidget {
-  const HeightWidget({super.key});
+  const HeightWidget({super.key,});
 
   @override
   State<HeightWidget> createState() => _HeightWidgetState();
 }
 
 class _HeightWidgetState extends State<HeightWidget> {
-  double height = 0;
-
   @override
   Widget build(BuildContext context) {
     return Container(

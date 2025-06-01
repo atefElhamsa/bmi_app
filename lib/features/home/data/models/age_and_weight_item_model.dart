@@ -7,10 +7,6 @@ class AgeAndWeightItemModel {
   AgeAndWeightItemModel({required this.title, required this.ageOrWeight});
 }
 
+final List itemsInfo = [AppTexts.weight, AppTexts.age];
+double height = 0;
 int weight = 0;
-int age = 0;
-
-final List<AgeAndWeightItemModel> itemsInfo = [
-  AgeAndWeightItemModel(title: AppTexts.weight, ageOrWeight: weight),
-  AgeAndWeightItemModel(title: AppTexts.age, ageOrWeight: age),
-];

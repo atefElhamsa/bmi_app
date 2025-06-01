@@ -24,7 +24,12 @@ class _ListViewAgeAndWeightState extends State<ListViewAgeAndWeight> {
         },
         itemBuilder: (context, index) {
           return ContainerItemWidget(
-            widget: AgeAndWeightItemWidget(ageAndWeightItemModel: itemsInfo[index]),
+            widget: AgeAndWeightItemWidget(
+              ageAndWeightItemModel: AgeAndWeightItemModel(
+                title: itemsInfo[index],
+                ageOrWeight: weight,
+              ),
+            ),
           );
         },
         itemCount: itemsInfo.length,
