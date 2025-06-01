@@ -29,7 +29,7 @@ class _HeightWidgetState extends State<HeightWidget> {
           const CustomText(textModel: TextModel(title: AppTexts.height)),
           CustomText(
             textModel: TextModel(
-              title: height.round().toString() + AppTexts.cm,
+              title: height.toStringAsFixed(1) + AppTexts.cm,
             ),
           ),
           Slider(
@@ -37,8 +37,9 @@ class _HeightWidgetState extends State<HeightWidget> {
             max: 300,
             value: height,
             onChanged: (value) {
-              height = value;
-              setState(() {});
+              setState(() {
+                height = value;
+              });
             },
           ),
         ],

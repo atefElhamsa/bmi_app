@@ -1,7 +1,8 @@
+import 'package:bmi_app/core/utils/app_colors.dart';
+import 'package:bmi_app/features/home/presentation/views/widgets/male_and_female_widget.dart';
 import 'package:flutter/material.dart';
-
-import '../../../data/models/container_type_item_widget_model.dart';
-import 'container_type_item_widget.dart';
+import '../../../data/models/container_type_item_model.dart';
+import 'container_item_widget.dart';
 
 class ListViewContainerType extends StatefulWidget {
   const ListViewContainerType({super.key});
@@ -31,16 +32,16 @@ class _ListViewContainerTypeState extends State<ListViewContainerType> {
                 });
               }
             },
-            child: ContainerTypeItemWidget(
-              containerTypeItemWidgetModel: ContainerTypeItemWidgetModel(
-                text: texts[index],
-                iconData: icons[index],
-                isSelected: activeIndex == index,
+            child: ContainerItemWidget(
+              color:
+                  activeIndex == index ? AppColors.pink : AppColors.appbarColor,
+              widget: MaleAndFemaleWidget(
+                containerTypeItemWidgetModel: itemsType[index],
               ),
             ),
           );
         },
-        itemCount: texts.length,
+        itemCount: itemsType.length,
       ),
     );
   }
