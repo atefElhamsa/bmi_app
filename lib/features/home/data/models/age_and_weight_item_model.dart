@@ -1,12 +1,13 @@
-import '../../../../core/utils/app_texts.dart';
-
 class AgeAndWeightItemModel {
   final String title;
-  int ageOrWeight;
+  double ageOrWeight;
+  void Function() onPressedAdd;
+  void Function() onPressedRemove;
 
-  AgeAndWeightItemModel({required this.title, required this.ageOrWeight});
+  AgeAndWeightItemModel({
+    required this.title,
+    required this.ageOrWeight,
+    required this.onPressedAdd,
+    required this.onPressedRemove,
+  });
 }
-
-final List itemsInfo = [AppTexts.weight, AppTexts.age];
-double height = 0;
-int weight = 0;

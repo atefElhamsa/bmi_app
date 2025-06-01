@@ -8,11 +8,7 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        TheThreeWidgets(),
-        const Spacer(),
-        CalculateContainer(),
-      ],
+      children: [TheThreeWidgets(), const Spacer(), const CalculateContainer()],
     );
   }
 }

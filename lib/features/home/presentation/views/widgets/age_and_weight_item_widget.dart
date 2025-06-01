@@ -26,7 +26,7 @@ class _AgeAndWeightItemWidgetState extends State<AgeAndWeightItemWidget> {
         ),
         CustomText(
           textModel: TextModel(
-            title: widget.ageAndWeightItemModel.ageOrWeight.toString(),
+            title: widget.ageAndWeightItemModel.ageOrWeight.toStringAsFixed(0),
           ),
         ),
         Row(
@@ -34,19 +34,11 @@ class _AgeAndWeightItemWidgetState extends State<AgeAndWeightItemWidget> {
           children: [
             IconWidget(
               iconData: Icons.remove_circle,
-              onPressed: () {
-                if (widget.ageAndWeightItemModel.ageOrWeight > 1) {
-                  widget.ageAndWeightItemModel.ageOrWeight -= 1;
-                  setState(() {});
-                }
-              },
+              onPressed: widget.ageAndWeightItemModel.onPressedRemove,
             ),
             IconWidget(
               iconData: Icons.add_circle,
-              onPressed: () {
-                widget.ageAndWeightItemModel.ageOrWeight += 1;
-                setState(() {});
-              },
+              onPressed: widget.ageAndWeightItemModel.onPressedAdd,
             ),
           ],
         ),

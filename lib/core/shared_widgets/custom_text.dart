@@ -13,6 +13,7 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       textModel.title,
+      textAlign: textModel.textAlign,
       style: GoogleFonts.roboto(
         color: textModel.color ?? AppColors.white,
         fontWeight: textModel.fontWeight ?? FontWeight.w700,

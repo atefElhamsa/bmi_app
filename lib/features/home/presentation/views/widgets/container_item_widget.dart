@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContainerItemWidget extends StatelessWidget {
-  const ContainerItemWidget({
-    super.key,
-    required this.widget,
-    this.color,
-  });
+  const ContainerItemWidget({super.key, required this.widget, this.color});
   final Widget widget;
   final Color? color;
 
